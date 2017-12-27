@@ -1,6 +1,6 @@
 <?php
 
 require 'core/bootstrap.php';
+//require 'trash/arrays.php';
 
-require Router::load('routes.php')
-    ->direct(Request::uri());
+require Router::load('routes.php')->direct(Request::uri());
