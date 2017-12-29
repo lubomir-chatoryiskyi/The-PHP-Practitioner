@@ -1,7 +1,7 @@
 <?php
 
-require 'Item.php';
+// require 'Item.php';
 
-$list = $app['database']->selectAll('list', 'Item');
+$users = $app['database']->selectAll('users');
 
 require 'views/index.view.php';
