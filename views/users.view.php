@@ -6,16 +6,13 @@
         <?php foreach ($users as $user) : ?>
             <li>
                 <div><strong><?= $user->name; ?></strong></div>
-                <?php /*if (!empty($item->description)) : */?><!--
-                    <p><?/*= $item->description; */?></p>
-                --><?php /*endif; */?>
             </li>
         <?php endforeach; ?>
     </ul>
 
     <h1>Submit your name</h1>
 
-    <form method="post" action="/names">
+    <form method="post" action="/users">
         <input type="text" name="name">
         <button type="submit">Submit</button>
     </form>
