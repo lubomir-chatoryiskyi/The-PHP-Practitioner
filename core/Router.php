@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 class Router {
 
     public $routes = [
@@ -52,7 +54,10 @@ class Router {
      */
     protected function callAction($controller, $action)
     {
-        $controllerToCall = new $controller;
+        $controllerToCall = "App\\Controllers\\{$controller}";
+
+        $controllerToCall = new $controllerToCall;
+
         if (!method_exists($controllerToCall, $action)) {
             throw new Exception("{$controller} does not respond to the {$action} action");
         }
